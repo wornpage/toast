@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { ToastProps } from './types.js';
 
-	let { message, kind = 'info', ondismiss, duration = 3000 }: ToastProps = $props();
+	let { message, kind = 'info', dismissLabel = 'Dismiss notification', ondismiss, duration = 3000 }: ToastProps = $props();
 
 	let visible = $state(true);
 	let dismissing = $state(false);
@@ -31,7 +31,7 @@
 	>
 		<span class="wrn-toast-icon" aria-hidden="true">{kind === 'error' ? '✗' : kind === 'success' ? '✓' : '→'}</span>
 		<span class="wrn-toast-text">{message}</span>
-		<button type="button" class="wrn-toast-dismiss" onclick={dismiss} aria-label="Dismiss notification">&times;</button>
+		<button type="button" class="wrn-toast-dismiss" onclick={dismiss} aria-label={dismissLabel}>&times;</button>
 	</div>
 {/if}
 
@@ -56,7 +56,7 @@
 		font-family: var(--wrn-toast-font, inherit);
 		font-size: 13px; font-weight: 600;
 		color: var(--wrn-toast-text, var(--cockpit-text, #21322b));
-		text-align: start; width: 100%;
+		text-align: start; width: 100%; max-inline-size: 100%; min-inline-size: 0;
 		box-sizing: border-box;
 		box-shadow: 0 2px 8px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
 		position: relative; overflow: hidden;
@@ -68,7 +68,7 @@
 	.wrn-toast-icon { font-size: 14px; line-height: 1; flex-shrink: 0; }
 	.wrn-toast.is-error .wrn-toast-icon { color: var(--wrn-toast-error-text, var(--cockpit-danger-text, #e74c3c)); }
 	.wrn-toast.is-success .wrn-toast-icon { color: var(--wrn-toast-success-text, var(--cockpit-success-text, #27ae60)); }
-	.wrn-toast-text { flex: 1; min-width: 0; line-height: 1.3; }
+	.wrn-toast-text { flex: 1; max-inline-size: 100%; min-width: 0; line-height: 1.3; overflow-wrap: anywhere; }
 	.wrn-toast-dismiss {
 		display: inline-grid; place-items: center; flex: 0 0 auto;
 		inline-size: 32px; block-size: 32px; margin: 0; padding: 0;

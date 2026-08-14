@@ -51,8 +51,14 @@ describe('toast component', () => {
 		expect(toastSource).toContain("role={kind === 'error' ? 'alert' : 'status'}");
 		expect(toastSource).toContain("aria-live={kind === 'error' ? 'assertive' : 'polite'}");
 		expect(toastSource).toContain('aria-atomic="true"');
-		expect(toastSource).toContain('class="wrn-toast-dismiss" onclick={dismiss} aria-label="Dismiss notification"');
+		expect(toastSource).toContain("dismissLabel = 'Dismiss notification'");
+		expect(toastSource).toContain('class="wrn-toast-dismiss" onclick={dismiss} aria-label={dismissLabel}');
 		expect(toastSource).not.toContain('<button type="button" class="wrn-toast"');
+	});
+
+	test('contains hostile messages inside the notification', () => {
+		expect(toastSource).toContain('max-inline-size: 100%; min-inline-size: 0;');
+		expect(toastSource).toContain('overflow-wrap: anywhere;');
 	});
 
 	test('calls dismissal once when manual and timed dismissal overlap', () => {

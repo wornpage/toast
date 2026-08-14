@@ -2030,24 +2030,24 @@ function Pr(e, t, n, r, i, a) {
 }
 //#endregion
 //#region src/Toast.svelte
-var Fr = /* @__PURE__ */ nr("<div aria-atomic=\"true\"><span class=\"wrn-toast-icon svelte-1w29e1y\" aria-hidden=\"true\"> </span> <span class=\"wrn-toast-text svelte-1w29e1y\"> </span> <button type=\"button\" class=\"wrn-toast-dismiss svelte-1w29e1y\" aria-label=\"Dismiss notification\">&times;</button></div>"), Ir = {
+var Fr = /* @__PURE__ */ nr("<div aria-atomic=\"true\"><span class=\"wrn-toast-icon svelte-1w29e1y\" aria-hidden=\"true\"> </span> <span class=\"wrn-toast-text svelte-1w29e1y\"> </span> <button type=\"button\" class=\"wrn-toast-dismiss svelte-1w29e1y\">&times;</button></div>"), Ir = {
 	hash: "svelte-1w29e1y",
-	code: "\n	@keyframes svelte-1w29e1y-wrn-toast-enter {\n		from { opacity: 0; transform: translateX(24px); }\n		to { opacity: 1; transform: translateX(0); }\n	}\n\n	@keyframes svelte-1w29e1y-wrn-toast-exit {\n		from { opacity: 1; transform: translateX(0); }\n		to { opacity: 0; transform: translateX(12px); }\n	}.wrn-toast.svelte-1w29e1y {display:flex;align-items:center;gap:8px;background:var(--wrn-toast-bg, var(--cockpit-surface, #fdfbf7));border:1px solid var(--wrn-toast-border, var(--cockpit-border, #e2ddd5));border-radius:var(--wrn-toast-radius, 6px);min-block-size:44px;padding:6px 8px 6px 14px;font-family:var(--wrn-toast-font, inherit);font-size:13px;font-weight:600;color:var(--wrn-toast-text, var(--cockpit-text, #21322b));text-align:start;width:100%;box-sizing:border-box;box-shadow:0 2px 8px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);position:relative;overflow:hidden;\n		animation: svelte-1w29e1y-wrn-toast-enter 220ms ease-out;}.wrn-toast.is-dismissing.svelte-1w29e1y { animation: svelte-1w29e1y-wrn-toast-exit 180ms ease-in forwards;pointer-events:none;}.wrn-toast.is-error.svelte-1w29e1y {border-color:var(--wrn-toast-error-border, var(--cockpit-danger-border, #e74c3c));background:var(--wrn-toast-error-bg, var(--cockpit-danger-bg, #fdf0ef));}.wrn-toast.is-success.svelte-1w29e1y {border-color:var(--wrn-toast-success-border, var(--cockpit-success-border, #27ae60));background:var(--wrn-toast-success-bg, var(--cockpit-success-bg, #edf9f0));}.wrn-toast-icon.svelte-1w29e1y {font-size:14px;line-height:1;flex-shrink:0;}.wrn-toast.is-error.svelte-1w29e1y .wrn-toast-icon:where(.svelte-1w29e1y) {color:var(--wrn-toast-error-text, var(--cockpit-danger-text, #e74c3c));}.wrn-toast.is-success.svelte-1w29e1y .wrn-toast-icon:where(.svelte-1w29e1y) {color:var(--wrn-toast-success-text, var(--cockpit-success-text, #27ae60));}.wrn-toast-text.svelte-1w29e1y {flex:1;min-width:0;line-height:1.3;}.wrn-toast-dismiss.svelte-1w29e1y {display:inline-grid;place-items:center;flex:0 0 auto;inline-size:32px;block-size:32px;margin:0;padding:0;border:0;border-radius:var(--wrn-toast-radius, 6px);background:transparent;color:inherit;cursor:pointer;font:inherit;font-size:18px;line-height:1;}.wrn-toast-dismiss.svelte-1w29e1y:hover {background:var(--wrn-toast-dismiss-hover-bg, var(--cockpit-hover-bg, rgba(0,0,0,0.08)));}.wrn-toast-dismiss.svelte-1w29e1y:focus-visible {outline:2px dashed var(--cockpit-accent, currentColor);outline-offset:1px;}\n\n	@media (pointer: coarse) {.wrn-toast.svelte-1w29e1y {min-block-size:52px;padding-block:4px;}.wrn-toast-dismiss.svelte-1w29e1y {inline-size:44px;block-size:44px;}\n	}\n\n	@media (prefers-reduced-motion: reduce) {.wrn-toast.svelte-1w29e1y,\n		.wrn-toast.is-dismissing.svelte-1w29e1y { animation: none;}\n	}"
+	code: "\n	@keyframes svelte-1w29e1y-wrn-toast-enter {\n		from { opacity: 0; transform: translateX(24px); }\n		to { opacity: 1; transform: translateX(0); }\n	}\n\n	@keyframes svelte-1w29e1y-wrn-toast-exit {\n		from { opacity: 1; transform: translateX(0); }\n		to { opacity: 0; transform: translateX(12px); }\n	}.wrn-toast.svelte-1w29e1y {display:flex;align-items:center;gap:8px;background:var(--wrn-toast-bg, var(--cockpit-surface, #fdfbf7));border:1px solid var(--wrn-toast-border, var(--cockpit-border, #e2ddd5));border-radius:var(--wrn-toast-radius, 6px);min-block-size:44px;padding:6px 8px 6px 14px;font-family:var(--wrn-toast-font, inherit);font-size:13px;font-weight:600;color:var(--wrn-toast-text, var(--cockpit-text, #21322b));text-align:start;width:100%;max-inline-size:100%;min-inline-size:0;box-sizing:border-box;box-shadow:0 2px 8px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);position:relative;overflow:hidden;\n		animation: svelte-1w29e1y-wrn-toast-enter 220ms ease-out;}.wrn-toast.is-dismissing.svelte-1w29e1y { animation: svelte-1w29e1y-wrn-toast-exit 180ms ease-in forwards;pointer-events:none;}.wrn-toast.is-error.svelte-1w29e1y {border-color:var(--wrn-toast-error-border, var(--cockpit-danger-border, #e74c3c));background:var(--wrn-toast-error-bg, var(--cockpit-danger-bg, #fdf0ef));}.wrn-toast.is-success.svelte-1w29e1y {border-color:var(--wrn-toast-success-border, var(--cockpit-success-border, #27ae60));background:var(--wrn-toast-success-bg, var(--cockpit-success-bg, #edf9f0));}.wrn-toast-icon.svelte-1w29e1y {font-size:14px;line-height:1;flex-shrink:0;}.wrn-toast.is-error.svelte-1w29e1y .wrn-toast-icon:where(.svelte-1w29e1y) {color:var(--wrn-toast-error-text, var(--cockpit-danger-text, #e74c3c));}.wrn-toast.is-success.svelte-1w29e1y .wrn-toast-icon:where(.svelte-1w29e1y) {color:var(--wrn-toast-success-text, var(--cockpit-success-text, #27ae60));}.wrn-toast-text.svelte-1w29e1y {flex:1;max-inline-size:100%;min-width:0;line-height:1.3;overflow-wrap:anywhere;}.wrn-toast-dismiss.svelte-1w29e1y {display:inline-grid;place-items:center;flex:0 0 auto;inline-size:32px;block-size:32px;margin:0;padding:0;border:0;border-radius:var(--wrn-toast-radius, 6px);background:transparent;color:inherit;cursor:pointer;font:inherit;font-size:18px;line-height:1;}.wrn-toast-dismiss.svelte-1w29e1y:hover {background:var(--wrn-toast-dismiss-hover-bg, var(--cockpit-hover-bg, rgba(0,0,0,0.08)));}.wrn-toast-dismiss.svelte-1w29e1y:focus-visible {outline:2px dashed var(--cockpit-accent, currentColor);outline-offset:1px;}\n\n	@media (pointer: coarse) {.wrn-toast.svelte-1w29e1y {min-block-size:52px;padding-block:4px;}.wrn-toast-dismiss.svelte-1w29e1y {inline-size:44px;block-size:44px;}\n	}\n\n	@media (prefers-reduced-motion: reduce) {.wrn-toast.svelte-1w29e1y,\n		.wrn-toast.is-dismissing.svelte-1w29e1y { animation: none;}\n	}"
 };
 function Lr(e, t) {
 	Ke(t, !0), gr(e, Ir);
-	let n = $(t, "message", 7), r = $(t, "kind", 7, "info"), i = $(t, "ondismiss", 7), a = $(t, "duration", 7, 3e3), o = /* @__PURE__ */ M(!0), s = /* @__PURE__ */ M(!1);
-	function c() {
-		Q(s) || (N(s, !0), setTimeout(() => {
-			N(o, !1), i()?.();
+	let n = $(t, "message", 7), r = $(t, "kind", 7, "info"), i = $(t, "dismissLabel", 7, "Dismiss notification"), a = $(t, "ondismiss", 7), o = $(t, "duration", 7, 3e3), s = /* @__PURE__ */ M(!0), c = /* @__PURE__ */ M(!1);
+	function l() {
+		Q(c) || (N(c, !0), setTimeout(() => {
+			N(s, !1), a()?.();
 		}, 180));
 	}
 	un(() => {
-		if (a() <= 0) return;
-		let e = setTimeout(() => c(), a());
+		if (o() <= 0) return;
+		let e = setTimeout(() => l(), o());
 		return () => clearTimeout(e);
 	});
-	var l = {
+	var u = {
 		get message() {
 			return n();
 		},
@@ -2060,41 +2060,48 @@ function Lr(e, t) {
 		set kind(e = "info") {
 			r(e), k();
 		},
-		get ondismiss() {
+		get dismissLabel() {
 			return i();
 		},
-		set ondismiss(e) {
+		set dismissLabel(e = "Dismiss notification") {
 			i(e), k();
 		},
-		get duration() {
+		get ondismiss() {
 			return a();
 		},
-		set duration(e = 3e3) {
+		set ondismiss(e) {
 			a(e), k();
+		},
+		get duration() {
+			return o();
+		},
+		set duration(e = 3e3) {
+			o(e), k();
 		}
-	}, u = rr(), d = $t(u), f = (e) => {
+	}, d = rr(), f = $t(d), p = (e) => {
 		var t = Fr();
-		let i;
-		var a = Qt(t), o = Qt(a, !0);
-		Re(a);
-		var l = en(a, 2), u = Qt(l, !0);
-		Re(l);
-		var d = en(l, 2);
+		let a;
+		var o = Qt(t), s = Qt(o, !0);
+		Re(o);
+		var u = en(o, 2), d = Qt(u, !0);
+		Re(u);
+		var f = en(u, 2);
 		Re(t), _n(() => {
-			i = yr(t, 1, "wrn-toast svelte-1w29e1y", null, i, {
+			a = yr(t, 1, "wrn-toast svelte-1w29e1y", null, a, {
 				"is-error": r() === "error",
 				"is-success": r() === "success",
-				"is-dismissing": Q(s)
-			}), Cr(t, "role", r() === "error" ? "alert" : "status"), Cr(t, "aria-live", r() === "error" ? "assertive" : "polite"), sr(o, r() === "error" ? "✗" : r() === "success" ? "✓" : "→"), sr(u, n());
-		}), Jn("click", d, c), ir(e, t);
+				"is-dismissing": Q(c)
+			}), Cr(t, "role", r() === "error" ? "alert" : "status"), Cr(t, "aria-live", r() === "error" ? "assertive" : "polite"), sr(s, r() === "error" ? "✗" : r() === "success" ? "✓" : "→"), sr(d, n()), Cr(f, "aria-label", i());
+		}), Jn("click", f, l), ir(e, t);
 	};
-	return hr(d, (e) => {
-		Q(o) && e(f);
-	}), ir(e, u), qe(l);
+	return hr(f, (e) => {
+		Q(s) && e(p);
+	}), ir(e, d), qe(u);
 }
 Yn(["click"]), Pr(Lr, {
 	message: {},
 	kind: {},
+	dismissLabel: {},
 	ondismiss: {},
 	duration: {}
 }, [], [], { mode: "open" });
@@ -2103,14 +2110,14 @@ Yn(["click"]), Pr(Lr, {
 var Rr = /* @__PURE__ */ nr("<div><!></div>");
 function zr(e, t) {
 	Ke(t, !0);
-	let n = $(t, "message", 7, ""), r = $(t, "kind", 7, "info"), i = $(t, "duration", 7, 3e3), a;
-	function o(e, t) {
-		a?.dispatchEvent(new CustomEvent(e, {
+	let n = $(t, "message", 7, ""), r = $(t, "kind", 7, "info"), i = $(t, "dismissLabel", 7, "Dismiss notification"), a = $(t, "duration", 7, 3e3), o;
+	function s(e, t) {
+		o?.dispatchEvent(new CustomEvent(e, {
 			detail: t,
 			bubbles: !0
 		}));
 	}
-	var s = {
+	var c = {
 		get message() {
 			return n();
 		},
@@ -2123,29 +2130,39 @@ function zr(e, t) {
 		set kind(e = "info") {
 			r(e), k();
 		},
-		get duration() {
+		get dismissLabel() {
 			return i();
 		},
-		set duration(e = 3e3) {
+		set dismissLabel(e = "Dismiss notification") {
 			i(e), k();
+		},
+		get duration() {
+			return a();
+		},
+		set duration(e = 3e3) {
+			a(e), k();
 		}
-	}, c = Rr();
-	return Lr(Qt(c), {
+	}, l = Rr();
+	return Lr(Qt(l), {
 		get message() {
 			return n();
 		},
 		get kind() {
 			return r();
 		},
-		get duration() {
+		get dismissLabel() {
 			return i();
 		},
-		ondismiss: () => o("worn-dismiss", {})
-	}), Re(c), Or(c, (e) => a = e, () => a), ir(e, c), qe(s);
+		get duration() {
+			return a();
+		},
+		ondismiss: () => s("worn-dismiss", {})
+	}), Re(l), Or(l, (e) => o = e, () => o), ir(e, l), qe(c);
 }
 customElements.define("worn-toast", Pr(zr, {
 	message: {},
 	kind: {},
+	dismissLabel: { attribute: "dismiss-label" },
 	duration: { type: "Number" }
 }, [], []));
 //#endregion
