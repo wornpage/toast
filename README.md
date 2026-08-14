@@ -1,6 +1,6 @@
 # @wornpage/toast
 
-Svelte 5 toast notification — fly-in, auto-dismiss, zero dependencies.
+Svelte 5 toast notification with CSP-compatible motion, auto-dismiss, and zero dependencies.
 
 <!-- wornpage-delivery:v2 browser-bundle -->
 ## Delivery
@@ -53,11 +53,15 @@ bun add @wornpage/toast
 | `duration` | `number` | `3000` | Auto-dismiss ms (0 = sticky) |
 | `ondismiss` | `() => void` | — | Called when toast is dismissed |
 
+## Interaction
+
+Toasts use stylesheet animations instead of inline transition styles, so they work with strict Content Security Policies. Reduced-motion users receive no animation. The dismiss control is 44px on coarse pointers while the desktop presentation remains compact.
+
 ## Events (web component)
 
 | Event | Description |
 |-------|-------------|
-| `worn-dismiss` | Fired when toast is clicked or auto-dismissed |
+| `worn-dismiss` | Fired when the dismiss control is used or the toast auto-dismisses |
 
 ## Theming
 

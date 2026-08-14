@@ -59,6 +59,19 @@ describe('toast component', () => {
 		expect(toastSource).toContain('if (dismissing) return;');
 		expect(toastSource).toContain('dismissing = true;');
 	});
+
+	test('uses stylesheet motion that remains compatible with a strict CSP', () => {
+		expect(toastSource).not.toContain("from 'svelte/transition'");
+		expect(toastSource).toContain('@keyframes wrn-toast-enter');
+		expect(toastSource).toContain('class:is-dismissing={dismissing}');
+		expect(toastSource).toContain('@media (prefers-reduced-motion: reduce)');
+	});
+
+	test('keeps the dismiss action touch-safe', () => {
+		expect(toastSource).toContain('min-block-size: 44px');
+		expect(toastSource).toContain('@media (pointer: coarse)');
+		expect(toastSource).toContain('inline-size: 44px; block-size: 44px');
+	});
 });
 
 describe('browser demo', () => {
