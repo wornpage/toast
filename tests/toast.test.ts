@@ -7,6 +7,7 @@ const indexSource = readFileSync(new URL('../src/index.ts', import.meta.url), 'u
 const viteSource = readFileSync(new URL('../vite.config.ts', import.meta.url), 'utf8').replace(/\r\n/gu, '\n');
 const demoSource = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
 const readmeSource = readFileSync(new URL('../README.md', import.meta.url), 'utf8').replace(/\r\n/gu, '\n');
+const packageManifest = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf8'));
 
 function createToast(items: ToastItem[], item: Omit<ToastItem, 'id'>): ToastItem[] {
 	const id = `toast-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
@@ -74,6 +75,14 @@ describe('toast component', () => {
 	test('calls dismissal once when manual and timed dismissal overlap', () => {
 		expect(toastSource).toContain('if (dismissing) return;');
 		expect(toastSource).toContain('dismissing = true;');
+	});
+
+	test('completes reduced-motion dismissal without waiting for an absent animation', () => {
+		expect(toastSource).toContain("import { prefersReducedMotion } from 'svelte/motion';");
+		expect(toastSource).toContain('function completeDismissal()');
+		expect(toastSource).toMatch(/if \(prefersReducedMotion\.current\) \{\s*completeDismissal\(\);\s*return;\s*\}\s*setTimeout\(completeDismissal, EXIT_DURATION_MS\);/u);
+		expect(packageManifest.version).toBe('0.1.5');
+		expect(readmeSource).toContain('Reduced-motion dismissal completes immediately instead of waiting for an exit animation that is not rendered');
 	});
 
 	test('pauses and resumes timed dismissal while the toast is being used', () => {
