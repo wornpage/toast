@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { prefersReducedMotion } from 'svelte/motion';
 	import type { ToastProps } from './types.js';
 
 	let { message, kind = 'info', dismissLabel = 'Dismiss notification', ondismiss, duration = 3000 }: ToastProps = $props();
@@ -17,14 +18,20 @@
 		autoDismissTimer = undefined;
 	}
 
+	function completeDismissal() {
+		visible = false;
+		ondismiss?.();
+	}
+
 	function dismiss() {
 		if (dismissing) return;
 		dismissing = true;
 		clearAutoDismissTimer();
-		setTimeout(() => {
-			visible = false;
-			ondismiss?.();
-		}, EXIT_DURATION_MS);
+		if (prefersReducedMotion.current) {
+			completeDismissal();
+			return;
+		}
+		setTimeout(completeDismissal, EXIT_DURATION_MS);
 	}
 
 	function startAutoDismissTimer() {
