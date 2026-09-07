@@ -1,5 +1,8 @@
 # @wornpage/toast
 
+> Part of **[Wornpage Components](https://github.com/wornpage/wornpage#component-library)**.
+> [Browse the catalog](https://wornpage.pages.dev) · [Setup guide](https://github.com/wornpage/wornpage/blob/main/docs/getting-started.md) · [Wornpage overview](https://github.com/wornpage/wornpage)
+
 Svelte 5 toast notification with CSP-compatible motion, auto-dismiss, and zero dependencies.
 
 <!-- wornpage-delivery:v2 browser-bundle -->
